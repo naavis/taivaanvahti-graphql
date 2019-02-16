@@ -12,6 +12,14 @@ type Observation {
   description: String
   observers: [String!]!
   type: ObservationType!
+  comments: [Comment]
+}
+
+type Comment {
+  id: ID!
+  user: String!
+  time: String!
+  text: String!
 }
 
 enum ObservationType {

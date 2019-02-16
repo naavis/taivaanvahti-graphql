@@ -5,4 +5,7 @@ module.exports = {
     observationsBy:
       async (_, { observer }, { dataSources }) => dataSources.observations.getObservationsBy(observer),
   },
+  Observation: {
+    comments: (obj, _, { dataSources }) => dataSources.comments.getCommentsForObservation(obj.id),
+  },
 };

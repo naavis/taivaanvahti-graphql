@@ -1,6 +1,7 @@
 const { ApolloServer } = require('apollo-server');
 const typeDefs = require('./schema');
 const ObservationAPI = require('./datasources/observation');
+const CommentAPI = require('./datasources/comments');
 const resolvers = require('./resolvers');
 
 const server = new ApolloServer({
@@ -8,6 +9,7 @@ const server = new ApolloServer({
   resolvers,
   dataSources: () => ({
     observations: new ObservationAPI(),
+    comments: new CommentAPI(),
   }),
 });
 
