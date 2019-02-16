@@ -8,10 +8,10 @@ type Query {
 
 type Observation {
   id: ID!
-  title: String
+  title: String!
   description: String
-  observers: [String]
-  type: ObservationType
+  observers: [String!]!
+  type: ObservationType!
 }
 
 enum ObservationType {
